@@ -1,0 +1,80 @@
+! URxvt
+
+! General settings
+URxvt.saveLines: 10000
+URxvt.scrollBar: False
+URxvt.cursosBlink: False
+
+URxvt.internalBorder: 12
+URxvt.borderLess: false
+
+! Disable scrollback buffer for secondary screen
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+
+Xcursor.size: 16
+
+! Fonts
+
+! Terminus
+URxvt.font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+
+! Hermit, Terminus as fallback
+!URxvt*font: xft:Hermit:medium:size=10:antialiasing=false, -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+!URxvt*boldFont: xft:Hermit:bold:size=10:antialiasing=false:style=medium, -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+!URxvt*italicFont: xft:Hermit:medium:size=10:antialiasing=false:style=medium, -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+!URxvt*boldItalicFont: xft:Hermit:bold:size=10:antialiasing=false:style=medium, -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+
+! Hermit, Terminus as fallback (larger fonts for screen recording)
+!URxvt*font: xft:Hermit:medium:size=16:antialiasing=false, -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+!URxvt*boldFont: xft:Hermit:bold:size=16:antialiasing=false:style=medium, -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+!URxvt*italicFont: xft:Hermit:medium:size=16:antialiasing=false:style=medium, -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+!URxvt*boldItalicFont: xft:Hermit:bold:size=16:antialiasing=false:style=medium, -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+
+! Rofi
+
+rofi.lines: 10
+rofi.eh: 1
+rofi.padding: 300
+rofi.fullscreen: true
+rofi.bw: 0
+rofi.separator-style: none
+rofi.hide-scrollbar: true
+rofi.fake-transparency: true
+rofi.fake-background: screenshot
+rofi.color-window: argb:cc1b1918, #000000, #000000
+rofi.color-normal: argb:001b1918, #a8a19f, argb:001b1918, argb:001b1918, #5ab738
+rofi.color-urgent: argb:001b1918, #a8a19f, argb:001b1918, argb:001b1918, #5ab738
+rofi.color-active: argb:001b1918, #a8a19f, argb:001b1918, argb:001b1918, #5ab738
+rofi.font: Hermit 18
+
+
+! Colors
+! special
+*.foreground:   #a8a19f
+*.background:   #1b1918
+*.cursorColor:  #a8a19f
+! black
+*.color0:       #1b1918
+*.color8:       #766e6b
+! red
+*.color1:       #f22c40
+*.color9:       #f22c40
+! green
+*.color2:       #5ab738
+*.color10:      #5ab738
+! yellow
+*.color3:       #d5911a
+*.color11:      #d5911a
+! blue
+*.color4:       #407ee7
+*.color12:      #407ee7
+! magenta
+*.color5:       #6666ea
+*.color13:      #6666ea
+! cyan
+*.color6:       #00ad9c
+*.color14:      #00ad9c
+! white
+*.color7:       #a8a19f
+*.color15:      #f1efee
