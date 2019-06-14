@@ -1,8 +1,11 @@
 " vim-plug
 call plug#begin('~/.vim/plugged')
 
+" Plug 'itchyny/lightline.vim'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
-Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 
 call plug#end()
@@ -89,3 +92,9 @@ set list listchars=tab:»\ ,extends:>,precedes:<,nbsp:•,trail:•
 
 " NERDTreeToggle shortcut
 map <C-n> :NERDTreeToggle<CR>
+
+" airline configs
+let g:airline_theme='wombat'
+highlight GitGutterAdd ctermfg=2
+highlight GitGutterChange ctermfg=3
+highlight GitGutterDelete ctermfg=9
