@@ -76,6 +76,11 @@ set showbreak=>
 " show line numbers
 set number
 set relativenumber
+
+" highlight options
+set cursorline
+set cursorcolumn
+highlight CursorColumn ctermbg=236
 highlight LineNr ctermfg=grey
 highlight clear SignColumn
 
