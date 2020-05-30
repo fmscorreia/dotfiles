@@ -7,6 +7,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
+Plug 'obreitwi/vim-sort-folds'
 
 call plug#end()
 
@@ -59,6 +60,9 @@ set expandtab
 " smart tabs
 set smarttab
 
+" allow pattern matching
+set magic
+
 " 1 tab = 2 spaces
 set shiftwidth=2
 set tabstop=2
@@ -66,9 +70,6 @@ set tabstop=2
 set ai " auto indent
 set si " smart indent
 set wrap " wrap lines
-
-" in visual mode, pressing * searches for current selection
-vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 
 " always show the status line
 set laststatus=2
@@ -90,11 +91,45 @@ highlight clear SignColumn
 " show trailing spaces
 set list listchars=tab:»\ ,extends:>,precedes:<,nbsp:•,trail:•
 
+" buffer configs
+set hidden
+
+
+"""""" MAPPINGS
+
+" auto close parens / brackets / quotes / etc
+inoremap " ""<left>
+inoremap "" ""
+inoremap ' ''<left>
+inoremap '' ''
+inoremap ( ()<left>
+inoremap () ()
+inoremap (<CR> (<CR>)<ESC>O
+inoremap [ []<left>
+inoremap [] []
+inoremap [<CR> [<CR>]<ESC>O
+inoremap { {}<left>
+inoremap {} {}
+inoremap {<CR {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
+" in visual mode, pressing * searches for current selection
+vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
+
+" quick buffer change
+nnoremap <F5> :buffers<CR>:buffer<Space>
+nmap <C-L> :bn<CR>
+nmap <C-P> :bp<CR>
+
 " NERDTreeToggle shortcut
-map <C-n> :NERDTreeToggle<CR>
+map <C-N> :NERDTreeToggle<CR>
+
+
+"""""" PLUGINS CONFIGS
 
 " airline configs
 let g:airline_theme='wombat'
 highlight GitGutterAdd ctermfg=2
 highlight GitGutterChange ctermfg=3
 highlight GitGutterDelete ctermfg=9
+
